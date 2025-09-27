@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial Data Dashboard</h1>
+        </header>
+
+        <div class="upload-section">
+            <h2>Upload Financial Data</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="userId">User ID:</label>
+                    <input type="number" id="userId" name="userId" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" min="2000" max="2100" required>
+                </div>
+                <div class="form-group">
+                    <label for="file">Excel File:</label>
+                    <input type="file" id="file" name="file" accept=".xlsx, .xls" required>
+                    <small>
+                        <strong>Expected format:</strong> Excel file with "Month" and "Amount" columns<br>
+                        <strong>Month:</strong> Full month names (January, February, etc.)<br>
+                        <strong>Amount:</strong> Numeric values in Rands (invalid values will default to R0)
+                    </small>
+                </div>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="uploadMessage" class="message"></div>
+        </div>
+
+        <div class="dashboard-section" id="dashboard" style="display: none;">
+            <h2>Financial Dashboard</h2>
+            <div class="user-info">
+                <h3 id="userName"></h3>
+                <p id="yearInfo"></p>
+            </div>
+            
+            <div class="charts-container">
+                <div class="chart-section">
+                    <canvas id="financialChart"></canvas>
+                </div>
+                <div class="table-section">
+                    <table id="financialTable">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Amount (R)</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
