@@ -23,3 +23,53 @@ A full-stack web application for uploading and visualizing financial data from E
 - Node.js (v14 or higher)
 - MySQL Server
 - Git
+
+## Usage
+
+### Step 1: Start the Backend Server
+```bash
+# Navigate to the backend directory
+cd backend
+
+# Install dependencies (if not done already)
+npm install
+
+# Start the server
+node server.js
+
+The backend will run on http://localhost:3000
+
+Step 2: Open the Frontend
+Open frontend/index.html in your web browser. You can:
+Double-click the file, or Use a local server like Live Server in VS Code
+
+Step 3: Upload Financial Data
+User ID: Enter 1 for Jane Doe or 2 for John Smith
+Year: Enter the financial year (e.g., 2024)
+File: Click "Choose File" and select an Excel file
+
+Click Upload
+
+Step 4: View Results
+
+Example Test
+Test with the provided sample file:
+
+User ID: 1
+Year: 2025
+File: Select samples/financial-data.xlsx
+Click Upload
+
+Expected Result: Dashboard showing Jane Doe's 2025 financial data with available months of data.
+
+Excel File Format Requirements
+Your Excel file must have this exact structure:
+
+Columns: "Month" and "Amount" (case-sensitive)
+Months: Full names (January, February, etc.)
+Amounts: Numeric values (invalid amounts default to R 0)
+
+Example:
+Month	Amount
+January	1500.00
+February	2200.50
