@@ -1,12 +1,12 @@
-# Financial Data Visualization Dashboard
+# Financial Data Visualisation Dashboard
 
-A full-stack web application for uploading and visualizing financial data from Excel files.
+A full-stack web application for uploading and visualising financial data from Excel files.
 
 ## Features
 
 - Excel file upload with validation
 - MySQL database integration
-- Data visualization with tables and charts
+- Data visualisation with tables and charts
 - Responsive design
 - Comprehensive error handling
 - Security measures for file uploads
@@ -42,7 +42,7 @@ mysql -u root -p < database/schema.sql
 const dbConfig = {
     host: 'localhost',
     user: 'root',
-    password: 'your_mysql_password_here', // ← Update this
+    password: '...', // ← Update this: your mysql password here
     database: 'financial_dashboard'
 };
 ```
@@ -76,13 +76,13 @@ You can:
 
 ### Step 4: View Results
 
-**Expected Result**: Dashboard showing {user's} {year} financial data with available months of data.
+**Expected Result**: Dashboard showing {user}'s {year} financial data with available months of data.
 
 **Excel File Format Requirements**
 - Your Excel file must have this exact structure:
-  - Columns: "Month" and "Amount" (case-sensitive)
-  - Months: Full names (January, February, etc.)
-  - Amounts: Numeric values (invalid amounts default to R 0)
+  - **Columns**: ```Month``` and ```Amount``` (case-sensitive)
+  - **Months**: Full names (```January```, ```February```, etc.)
+  - **Amounts**: Numeric values (invalid amounts default to ```R 0```)
 
 ```bash
 Example:
