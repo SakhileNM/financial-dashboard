@@ -26,7 +26,28 @@ A full-stack web application for uploading and visualizing financial data from E
 
 ## Usage
 
-### Step 1: Start the Backend Server
+### Step 1: Initial Setup
+
+**Clone the Repository**
+```bash
+git clone https://github.com/SakhileNM/financial-dashboard.git
+cd financial-dashboard
+```
+
+**Database Setup**
+```bash
+mysql -u root -p < database/schema.sql
+
+# Edit backend/server.js and update your MySQL password:
+const dbConfig = {
+    host: 'localhost',
+    user: 'root',
+    password: 'your_mysql_password_here', // ← Update this
+    database: 'financial_dashboard'
+};
+```
+
+**Backend Setup**
 ```bash
 # Navigate to the backend directory
 cd backend
