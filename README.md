@@ -47,9 +47,9 @@ You can:
  - Use a local server like Live Server in VS Code
 
 ### Step 3: Upload Financial Data
-**User ID**: Enter ```1``` for Jane Doe or ```2``` for John Smith
-**Year**: Enter the financial year (e.g., ```2025```)
-**File**: Click "Choose File" and select an Excel file
+- **User ID**: Enter ```1``` for Jane Doe or ```2``` for John Smith
+- **Year**: Enter the financial year (e.g., ```2025```)
+- **File**: Click "Choose File" and select an Excel file
 
 **Click Upload**
 
@@ -57,12 +57,11 @@ You can:
 
 **Expected Result**: Dashboard showing {user's} {year} financial data with available months of data.
 
-Excel File Format Requirements
-Your Excel file must have this exact structure:
-
-Columns: "Month" and "Amount" (case-sensitive)
-Months: Full names (January, February, etc.)
-Amounts: Numeric values (invalid amounts default to R 0)
+**Excel File Format Requirements**
+- Your Excel file must have this exact structure:
+  - Columns: "Month" and "Amount" (case-sensitive)
+  - Months: Full names (January, February, etc.)
+  - Amounts: Numeric values (invalid amounts default to R 0)
 
 ```bash
 Example:
